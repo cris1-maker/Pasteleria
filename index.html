@@ -1,13 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mil sabores</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pagina Web</title>
+  <!-- Materialize -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <h1>Bienvenido a Mil sabores</h1>
-    <p>Explora una variedad de recetas deliciosas y saludables.</p>
-    <a href="recetas.html">Ver Recetas</a>
+<body class="indigo lighten-4">
+    <!-- NAVBAR -->
+    <nav class="transparent z-depth-5">
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo">Mil Sabores</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Location</a></li>
+                <li>
+                    <a class="btn-medium  transparent">
+                    <i class="material-icons">add_shopping_cart</i>
+                    </a>
+                </li>
+                <li><a class="btn-medium transparent" href="registro.html" >
+                    <i class="material-icons">account_circle</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container center-align">
+        <img src="img/logo.png" alt="Logo" class="circle responsive-img" style="width:200px; height:auto; margin-top:60px;">
+        <h3>Bienvenidos a Mil Sabores</h3>
+        <p>Tu destino dulce para pasteles y postres excepcionales</p>
+
+    </div>
+    <!-- PRODUCTOS -->
+    <div class="container productos-container">
+        <div class="carousel-container">
+            <!-- Botón izquierdo -->
+            <button id="prevBtn" class="carousel-btn left">⟵</button>
+            <!-- Carrusel -->
+            <div class="carousel carousel-slider center" id="myCarousel">
+                <a class="carousel-item" href="#one!"><img src="img/torta.png" alt="Imagen 1"></a>
+                <a class="carousel-item" href="#two!"><img src="img/Boda.png" alt="Imagen 2"></a>
+                <a class="carousel-item" href="#three!"><img src="img/cheese.png" alt="Imagen 3"></a>
+                <a class="carousel-item" href="#four!"><img src="img/croasan.png" alt="Imagen 4"></a>
+                <a class="carousel-item" href="#five!"><img src="img/galleta.png" alt="Imagen 5"></a>
+            </div>
+            <!-- Botón derecho -->
+            <button id="nextBtn" class="carousel-btn right">⟶</button>
+        </div>
+    </div>
+    <div class="container center-align">
+        <h4>Nuestros productos</h4>
+        <p>Descubre la variedad de delicias que ofrecemos en nuestra pastelería. Desde tortas personalizadas hasta galletas artesanales, cada producto está hecho con ingredientes frescos y mucho amor. ¡Explora nuestro menú y encuentra tu próximo antojo dulce!</p>
+
+    </div>    
+    <!-- FOOTER -->
+    <footer class="page-footer transparent z-depth-5">
+        <div class="container center-align">
+        <p>&copy; 2025 Pasteleria Mil sabores. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--JavaScript JS-->
+    <script src="scriptCarrusel.js"></script>
 </body>
 </html>
