@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productos | Mil Sabores</title>
+
+  <!-- Materialize CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  
+  <!-- Tu estilo personalizado -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="indigo lighten-4">
+
+  <!-- NAVBAR (igual a index.html) -->
+  <nav class="transparent z-depth-5">
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo">Mil Sabores</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Menú</a></li>
+        <li><a href="#">Ubicación</a></li>
+        <li><a class="btn-medium transparent"><i class="material-icons">add_shopping_cart</i></a></li>
+        <li><a class="btn-medium transparent" href="registro.html"><i class="material-icons">account_circle</i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Título principal -->
+  <div class="container center-align">
+    <h3>Explora Nuestros Productos</h3>
+    <p>Delicias irresistibles hechas con amor y dulzura</p>
+  </div>
+
+  <!-- CONTENEDOR DE PRODUCTOS -->
+  <div class="container">
+    <div class="row" id="productos-container">
+      <!-- Aquí se insertarán los productos dinámicamente -->
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="page-footer transparent z-depth-5">
+    <div class="container center-align">
+      <p>&copy; 2025 Pastelería Mil Sabores. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/productos.js"></script>
+</body>
+</html>

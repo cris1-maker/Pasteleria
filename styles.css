@@ -1,58 +1,46 @@
-/* Fondo general */
-/* Para que el footer se mantenga al fondo */
+/* ==========================================
+   ESTILOS GENERALES UNIFICADOS Y ORDENADOS
+   ========================================== */
+
+/* 1. Reset y estructura base */
 html, body {
   height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
+  font-family: 'Segoe UI', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: small;
+  color: #333;
+  background-image: url(img/fondo.jpeg);
+  background-size: cover;
 }
-/* Sección principal */
-h3, h4 , p {
+
+/* 2. Encabezados y texto con sombra para destacar sobre fondo */
+h3, h4, p {
   text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
   color: white;
   font-weight: bold;
- 
 }
 
+/* 3. Estructura de layout */
 .container, .section {
-  flex: 1; /* Empuja el footer hacia abajo */
+  flex: 1;
 }
 
-body {
-  background-image: url(img/fondo.jpeg);
-  background-size: cover;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: small;
-}
-/*body {
-  background: linear-gradient(135deg, #1e3c72, #2a5298, #1e3c72, #2a5298);
-  background-size: 400% 400%;
-  animation: gradientBG 5s ease infinite;
-  font-family: 'Segoe UI', sans-serif;
-  color: #ffffff;
-}*/
-
-/* Animación sutil del degradado */
-/*@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Navbar */
+/* ==========================================
+   NAVBAR
+   ========================================== */
 nav {
   background-color: rgba(0, 0, 0, 0.8) !important;
 }
 
-
-
 nav .brand-logo {
   display: flex;
   align-items: center;
-  margin-right: 20px; /* Espacio con el menú */
+  margin-right: 20px;
 }
 
-#nav2  {
+#nav2 {
   background-color: #6c3632 !important;
   height: 40px;
   justify-content: center;
@@ -75,18 +63,10 @@ nav .brand-logo {
   margin-top: -10px;
 }
 
-/* Footer */
-.page-footer {
-  background-color: transparent !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  text-align: center;
-  padding: 5px 0;
-}
-
 #nav-mobile a {
   position: relative;
   font-size: 1.1em;
-  color:white;
+  color: white;
   text-decoration: none;
   font-weight: 500;
   margin-left: 40px;
@@ -108,54 +88,63 @@ nav .brand-logo {
   transform: scaleX(1);
 }
 
-.productos-container{
-    width: 80%;               /* Ajusta el ancho a tu gusto */
-    margin: 50px auto;        /* Centra horizontalmente y con margen superior */
-    padding: 20px;            /* Espacio interno */
-    background-color: #561411; /* Fondo gris claro, cambia por el color que quieras */
-    /*background-image: url(img/text.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size:contain;*/
-    border-radius: 10px;      /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra opcional */
-    border: #ffffff 8px solid ; /* Borde rosa */
+.dropdown-content {
+  background-color: rgba(255, 252, 252, 0.282);
+  border-radius: 8px;
+  color: white;
 }
 
-.productos-container h4 {
-    color: #feaee9;             /* Color del texto */
-    text-align: center;       /* Centra el texto */
-    margin-bottom: 20px;      /* Espacio debajo del título */
+.dropdown-content li a {
+  color: white !important;
+  font-weight: 500;
+  left: 0;
+  right: auto;
 }
 
+.dropdown {
+  border: none !important;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.page-footer {
+  background-color: transparent !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding: 5px 0;
+}
+
+/* ==========================================
+   CARRUSEL DE IMÁGENES
+   ========================================== */
 .carousel-container {
   position: relative;
-  width: 600px;     
-  margin: 0 auto;    /* ya hace que se centre horizontalmente */
+  width: 600px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;  /* centra el contenido interno */
+  justify-content: center;
   align-items: center;
 }
 
 .carousel {
   display: flex;
-  justify-content: center; /* centra horizontalmente */
-  align-items: center;     /* centra verticalmente */
-  gap: 20px;               /* opcional: espacio entre imágenes */
-  overflow: hidden;         /* oculta desbordes */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
 }
 
 .carousel .carousel-item img {
-  width: auto;          /* que no se estiren */
-  max-width: 100%;      /* no se salga del contenedor */
+  width: auto;
+  max-width: 100%;
   height: 300px;
-  object-fit: contain;  
-  display: block;       /* evita espacio inferior */
-  margin: 0 auto;       /* centra la imagen dentro del item */
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
   border-radius: 10px;
 }
 
-/* Botones generales */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -170,64 +159,103 @@ nav .brand-logo {
   z-index: 10;
 }
 
-/* Botón izquierdo */
-.carousel-btn.left {
-  left: -40px;   /* Fuera del carrusel */
-  margin-top : 200px;
-  background-color: #feaee9;
-  color: rgb(104, 0, 104);
-  display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 20%;
-    color: rgb(87, 17, 98);
-    font-size: 24px;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-}
-/* Botón derecho */
+.carousel-btn.left,
 .carousel-btn.right {
-  right: -50px;  /* Fuera del carrusel */
-  margin-top : 200px;
   background-color: #feaee9;
   color: rgb(104, 0, 104);
+  width: 30px;
+  height: 30px;
+  border-radius: 20%;
+  font-size: 24px;
   display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 20%;
-    color: rgb(87, 17, 98);
-    font-size: 24px;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
+  justify-content: center;
+  align-items: center;
 }
 
-.dropdown-content {
-  background-color: rgba(255, 252, 252, 0.282);
+.carousel-btn.left {
+  left: -40px;
+  margin-top: 200px;
+}
+
+.carousel-btn.right {
+  right: -50px;
+  margin-top: 200px;
+}
+
+/* ==========================================
+   CONTENEDOR DE PRODUCTOS
+   ========================================== */
+.productos-container {
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #561411;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border: #ffffff 8px solid;
+}
+
+.productos-container h4 {
+  color: #feaee9;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* GRID DINÁMICO PARA PRODUCTOS */
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card-producto {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-producto:hover {
+  transform: scale(1.05);
+}
+
+.card-producto img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
   border-radius: 8px;
-  color:white;
 }
 
-.dropdown-content li a {
-  color: rgb(255, 255, 255) !important;
-  font-weight: 500;
-  left:0;
-  right: auto;
+.card-producto h3 {
+  font-size: 1.4rem;
+  color: #6a1b9a;
 }
 
-.dropdown{
-    border : none !important;
+.card-producto p {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.card-producto button {
+  background-color: #6a1b9a;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.card-producto button:hover {
+  background-color: #4a148c;
 }
 
 
+/* ==========================================
+   FIN DEL CSS UNIFICADO
+   ========================================== */
